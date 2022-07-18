@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --amarelo: #FFCB47;
+    --preto: #202020;
+    --verdeEscuro: #213E26;
+    --brancoBg: #F8F8F8;
+    --brancoColor: #fff;
+    --fontFamilyMenu: 'Montserrat';
+    --fontFamilyTitle: 'Elsie Swash Caps';
+}
+
+p {
+    font-family: var(--fontFamilyMenu);
+    opacity: .7;
+}
+
+figure {
+    height: 600px;
+    width: 500px;
+}
+
+figure img  {
+    height: 100%;
+    width: 100%;
+}

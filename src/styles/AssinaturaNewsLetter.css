@@ -1,0 +1,104 @@
+.container {
+    padding: 0 14rem;
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container div:nth-child(1) {
+    flex: .5;
+}
+
+.container div figure {
+    flex: 1;
+}
+
+.paragrafo-1 {
+    font-size: 22px;
+    line-height: 26.82px;
+}
+
+.paragrafo-2 {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+h3 {
+    font-family: var(--fontFamilyTitle);
+    font-weight: bold;
+    font-size: 82pt;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.input-email-btn {
+    display: flex;
+    align-items: center;
+
+    padding: 2rem 0;
+}
+
+.icon-email {
+    display: flex;
+    align-items : center;
+    gap: 16px;
+    background-color: var(--brancoColor);
+    padding: 0 1.5rem;
+    box-shadow: 21px 12px 36px rgba(0, 0, 0,  10%);
+}
+
+.icon-email img {
+    opacity: .3;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-email input {
+    border: 0;
+    padding: 1.4rem  1.5rem 1.4rem 0;
+    outline: none;
+}
+
+.btn-emailNewsLetter {
+    padding: 1.3rem 2rem;
+    background-color: var(--amarelo);
+    color: var(--brancoColor); 
+    font-family: var(--fontFamilyMenu);
+    line-height: 19.5px;
+    border: 0;
+    box-shadow: 21px 16px 20px rgba(255, 203, 71, 20%);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.btn-emailNewsLetter.disabled {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+@media(max-width: 700px) {
+    h3, p {
+        font-size: 30pt;
+    }
+    .container {
+        padding: 0;
+    }
+
+    .container div {
+        flex: 1;
+    }
+
+    #plantaTelaPrincipal {
+        display: none;
+    }
+    
+    .btn-emailNewsLetter {
+        line-height: normal;
+        padding: .95rem;
+    }
+}

@@ -28,3 +28,49 @@ figure img  {
     height: 100%;
     width: 100%;
 }
+
+.back-Top {
+    display: inline-block;
+    position: fixed;
+    top: calc(100vh - 120px);
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--amarelo);
+    padding: .5rem;
+    text-decoration: none;
+    color: var(--preto);
+
+    transition: all .5s;
+}
+
+.back-Top:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, .2);
+}
+
+footer {
+    background-color: var(--amarelo);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    color: var(--preto);
+    text-decoration: none;
+    font-family: var(--fontFamilyMenu);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: all .5s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #000;
+}

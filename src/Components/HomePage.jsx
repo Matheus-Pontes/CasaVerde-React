@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import { Menu } from "./Menu";
 import { OpcoesAcaoPlantas } from "./OpcoesAcaoPlantas";
 import { AssinaturaNewsLetter } from "./AssinaturaNewsLetter";
+import { Ofertas } from "./Ofertas";
+import { ArrowUp } from "phosphor-react";
 
 import "../styles/HomePage.css"
-import { Ofertas } from "./Ofertas";
 
 export function HomePage() {
     return (
@@ -16,6 +18,17 @@ export function HomePage() {
             <AssinaturaNewsLetter />
             <OpcoesAcaoPlantas />
             <Ofertas />
+
+            {
+                window.scrollY > 0 ? 
+                <a href="#menu">
+                    <ArrowUp size={32} className="back-Top"/>
+                </a> : ''
+            }
+
+            <footer>
+                <a href="https://github.com/Matheus-Pontes" title="Acesso ao meu github hehe">&copy; Desenvolvido por Matheus Pontes<img src="https://img.icons8.com/windows/32/000000/github.png"/></a>
+            </footer>
         </>
     )
 }

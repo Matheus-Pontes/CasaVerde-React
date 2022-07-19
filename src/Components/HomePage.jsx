@@ -15,7 +15,6 @@ export function HomePage() {
             <Menu />
             <AssinaturaNewsLetter />
             <OpcoesAcaoPlantas />
-
             <Ofertas />
         </>
     )

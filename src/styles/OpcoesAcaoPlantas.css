@@ -66,4 +66,9 @@
         display: initial;
         text-align: center;
     }
+
+    .opcoes-acoes {
+        display: flex;
+        justify-content: center;
+    }
 }

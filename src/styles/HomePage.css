@@ -1,0 +1,18 @@
+body {
+    background-color: var(--brancoBg);
+}
+
+.imageTop {
+    position: absolute;
+    top: -84.22px;
+    right: 0;
+    z-index: -1;
+}
+
+@media(max-width: 700px) {
+    
+    .imageTop {
+        display: none;
+    }
+
+}

@@ -8,7 +8,8 @@ Projeto Casa Verde, do site de desafios a alura - [7daysofcode - Alura](https://
     - Envio de email's para saber das novas novidades. (Tive problemas de CORS com a plataforma SendGrid testei várias formas que poderiam resolver mas não funcionou.)
 
 ## Layout
-- imagem
+- ![image](https://user-images.githubusercontent.com/62751571/180577671-ac8654fb-a949-4a69-bb95-ac7f7ff91408.png)
+- ![image](https://user-images.githubusercontent.com/62751571/180577723-2e525b57-fd1d-44a4-8d3e-25ea7e8a9a35.png)
 
 ## Rodando localmente
 - Faça o clone do projeto

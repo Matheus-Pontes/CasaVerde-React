@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
-import { Menu } from "./Menu";
-import { OpcoesAcaoPlantas } from "./OpcoesAcaoPlantas";
-import { AssinaturaNewsLetter } from "./AssinaturaNewsLetter";
-import { Ofertas } from "./Ofertas";
+import { Menu } from "../Components/Menu";
+import { OpcoesAcaoPlantas } from "../Components/OpcoesAcaoPlantas";
+import { AssinaturaNewsLetter } from "../Components/AssinaturaNewsLetter";
+import { Ofertas } from "../Components/Ofertas";
 import { ArrowUp } from "phosphor-react";
 
 import "../styles/HomePage.css"

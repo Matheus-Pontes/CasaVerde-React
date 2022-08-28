@@ -1,5 +1,5 @@
-import ImgPlanta2 from '../img/planta2.png';
-import "../styles/OpcoesAcaoPlantas.css";
+import ImgPlanta2 from '../../img/planta2.png';
+import "./styles.css";
 
 export function OpcoesAcaoPlantas() {
     return (

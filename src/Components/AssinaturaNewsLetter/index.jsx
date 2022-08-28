@@ -1,5 +1,5 @@
-import "../styles/AssinaturaNewsLetter.css";
-import ImgPlanta from '../img/planta.png';
+import "./styles.css";
+import ImgPlanta from '../../img/planta.png';
 import { useState } from "react";
 import validator from "validator";
 import * as mail from "@sendgrid/mail"; 

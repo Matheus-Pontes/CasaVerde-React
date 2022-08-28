@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import "../styles/Ofertas.css";
-import ImgPlanta1 from '../img/plantaOferta1.png';
-import ImgPlanta2 from '../img/plantaOferta2.png';
-import ImgPlanta3 from '../img/plantaOferta3.png';
+import "./styles.css";
+import ImgPlanta1 from '../../img/plantaOferta1.png';
+import ImgPlanta2 from '../../img/plantaOferta2.png';
+import ImgPlanta3 from '../../img/plantaOferta3.png';
 import { Funnel } from "phosphor-react";
 
 const API_OFERTAS = "https://gist.githubusercontent.com/bugan/41d60ffa23fa0c4044cc138bf670780d/raw";

@@ -7,6 +7,8 @@ import * as mail from "@sendgrid/mail";
 const API_KEY = "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";
 mail.setApiKey(API_KEY);
 
+const ClearField = ($id) => document.querySelector(`#${$id}`).value = '';
+
 export function AssinaturaNewsLetter() {
     const [toEmail, setToEmail] = useState('');
     const [isValidateEmail, setIsValidateEmail] = useState(false);
@@ -14,16 +16,11 @@ export function AssinaturaNewsLetter() {
     const validateEmail = function(toEmail) {
         setToEmail(toEmail);
 
-        if(validator.isEmail(toEmail)) {
-            setIsValidateEmail(true);
-        }   
-        else {
-            setIsValidateEmail(false);
-        }
+        validator.isEmail(toEmail) ? setIsValidateEmail(true) : setIsValidateEmail(false);
     }
 
     const sendEmail = (toEmail) => {
-        document.querySelector('#email').value = '';
+        ClearField("email");
         setIsValidateEmail(false);
         
         const msgConfig = {
@@ -71,8 +68,7 @@ export function AssinaturaNewsLetter() {
                         isValidateEmail ?
                         <button type="submit" className='btn-emailNewsLetter' onClick={handleAssinarNewsLetter}>Assinar newsletter</button>
                         :
-                        <button className='btn-emailNewsLetter disabled'>Assinar newsletter</button>
-                        
+                        <button className='btn-emailNewsLetter disabled'>Assinar newsletter</button>                       
                     }
                 </form>
             </div>

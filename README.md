@@ -6,6 +6,7 @@ Projeto Casa Verde, do site de desafios a alura - [7daysofcode - Alura](https://
 - O projeto tem como objetivo utilizar a tecnologia REACTJS para construção de um site de vendas de plantas com, 
     - Consumo de API com os dados das plantas
     - Envio de email's para saber das novas novidades. (Tive problemas de CORS com a plataforma SendGrid testei várias formas que poderiam resolver mas não funcionou.)
+        - Retirei o sendgrid, por que as chaves estão expostas não foi legal. Então retirei evitando problemas e apenas tem uma mensagem para o usuário vou testar uma nova estratégia para envio de email.
 
 ## Layout
 - ![image](https://user-images.githubusercontent.com/62751571/180577671-ac8654fb-a949-4a69-bb95-ac7f7ff91408.png)

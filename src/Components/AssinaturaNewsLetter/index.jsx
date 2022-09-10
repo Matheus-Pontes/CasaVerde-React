@@ -2,10 +2,6 @@ import "./styles.css";
 import ImgPlanta from '../../img/planta.png';
 import { useState } from "react";
 import validator from "validator";
-import * as mail from "@sendgrid/mail"; 
-
-const API_KEY = "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";
-mail.setApiKey(API_KEY);
 
 const ClearField = ($id) => document.querySelector(`#${$id}`).value = '';
 
@@ -21,28 +17,11 @@ export function AssinaturaNewsLetter() {
 
     const sendEmail = (toEmail) => {
         ClearField("email");
-        setIsValidateEmail(false);
         
-        const msgConfig = {
-            to: toEmail,
-            from: 'pontesm000@gmail.com',
-            subject: 'Assinatura NewsLetter Casa Verde',
-            html: `
-                <h1>Olá, ${toEmail}</h1>
-
-                <p>Boas-vindas à Casa Verde! Você se cadastrou em nossa newsletter e vai começar a receber e-mails com as novidades de nossa loja e dicas de como cuidar de suas plantas.</p>
-
-                <p>Até logo!</p>
-            `
-        }
-
-        mail.send(msgConfig)
-        .then(() => {
-            alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail: ${toEmail}".`);
-        }).catch((error) => {
-            console.log(error);
-        })
-
+        isValidateEmail ?
+            alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail: ${toEmail}".`)
+        : 
+            alert(`Informe um e-mail: ${toEmail}". Válido !!!`);
     }
 
     const handleAssinarNewsLetter = function(event) {

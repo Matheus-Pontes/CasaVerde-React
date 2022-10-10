@@ -3,8 +3,6 @@ import ImgPlanta from '../../img/planta.png';
 import { useState } from "react";
 import validator from "validator";
 
-const ClearField = ($id) => document.querySelector(`#${$id}`).value = '';
-
 export function AssinaturaNewsLetter() {
     const [toEmail, setToEmail] = useState('');
     const [isValidateEmail, setIsValidateEmail] = useState(false);
@@ -16,8 +14,8 @@ export function AssinaturaNewsLetter() {
     }
 
     const sendEmail = (toEmail) => {
-        ClearField("email");
-        
+        document.querySelector('#email').value = '';
+
         isValidateEmail ?
             alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail: ${toEmail}".`)
         : 

@@ -1,6 +1,49 @@
+import { Moon, Sun } from "phosphor-react";
+import { useState } from "react";
 import "./styles.css";
 
 export function Menu() {
+
+    const cssVariables = {
+        amarelo: '#FFCB47',
+        preto: '#202020',
+        verdeEscuro: '#213E26',
+        brancoBg: '#F8F8F8',
+        brancoColor: '#fff',
+    };
+
+    const [isDarkMode,  setIsDarkMode] = useState(false);
+
+    const handleToogleDarkMode = () => {
+        setIsDarkMode(prevstate => !prevstate);
+
+        modifyColors();
+    }
+    
+    const modifyColors = () => {
+
+        let menuList = document.querySelectorAll('.darkMode'); 
+        let nomePlantas = document.querySelectorAll('.oferta-detalhes div h3');
+        let precoPlantas = document.querySelectorAll('.oferta-detalhes div p');
+
+        if(isDarkMode) {
+            document.querySelector('body').style.background = cssVariables.preto;
+            document.querySelector('body').style.color = cssVariables.brancoBg;
+            menuList.forEach(a => a.style.color = cssVariables.brancoBg);
+            document.querySelector('.container-filtro').style.color = cssVariables.preto;
+            nomePlantas.forEach(nome => nome.style.color = cssVariables.preto );
+            precoPlantas.forEach(preco => preco.style.color = cssVariables.preto);
+        }
+        else {
+            document.querySelector('body').style.background = cssVariables.brancoBg;
+            document.querySelector('body').style.color = cssVariables.preto;
+            menuList.forEach(a => a.style.color = cssVariables.preto);
+            document.querySelector('.container-filtro').style.color = cssVariables.preto;
+            nomePlantas.forEach(nome => nome.style.color = cssVariables.preto );
+            precoPlantas.forEach(preco => preco.style.color = cssVariables.preto);
+        }
+    }
+
     return (
         <header id="menu">
             <div>
@@ -28,11 +71,21 @@ export function Menu() {
 
             <nav>
                 <ul>
-                    <li><a href="#">Como fazer </a><span className="divisao"> / </span></li>
-                    <li><a href="#"> Ofertas   </a><span className="divisao"> / </span></li>
-                    <li><a href="#">Depoimentos </a><span className="divisao"> / </span></li>
-                    <li><a href="#">Vídeos </a><span className="divisao"> / </span></li>
-                    <li><a href="#">Meu carrinho</a><span></span></li>
+                    <li><a href="#" className="darkMode">Como fazer </a><span className="divisao"> / </span></li>
+                    <li><a href="#" className="darkMode"> Ofertas   </a><span className="divisao"> / </span></li>
+                    <li><a href="#" className="darkMode">Depoimentos </a><span className="divisao"> / </span></li>
+                    <li><a href="#" className="darkMode">Vídeos </a><span className="divisao"> / </span></li>
+                    <li><a href="#" className="darkMode">Meu carrinho</a><span></span></li>
+                    <li>
+                        <span>
+                        {
+                            isDarkMode ? 
+                                <Moon size={26} onClick={handleToogleDarkMode}/>
+                            :
+                                <Sun size={26} onClick={handleToogleDarkMode}/>
+                        }
+                        </span>
+                    </li>
                 </ul>
             </nav>
         </header>

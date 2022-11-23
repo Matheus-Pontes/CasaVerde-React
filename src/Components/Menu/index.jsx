@@ -10,7 +10,6 @@ export function Menu() {
         setIsDarkMode(prevstate => !prevstate);
     }
     
-    
     return (
         <header id="menu">
             <div>

@@ -23,6 +23,28 @@ ul li a {
     font-weight: bold;
 }
 
+#changeTheme {
+    display: none; 
+}
+
+#changeTheme, :root:has(#changeTheme:checked) {
+    --bg-color: #000;
+    --text-color: #fefefe; 
+}
+
+.container-filtro {
+    --text-color: #000;
+}
+
+.darkMode {
+    color: var(--text-color);
+} 
+
+.oferta-detalhes div h3,
+.oferta-detalhes div p  {
+    --text-color: #000;
+}
+
 @media(max-width: 700px) {
     ul {
         gap: 25px;

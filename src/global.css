@@ -14,6 +14,11 @@
     --fontFamilyTitle: 'Elsie Swash Caps';
 }
 
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
 p {
     font-family: var(--fontFamilyMenu);
     opacity: .7;
